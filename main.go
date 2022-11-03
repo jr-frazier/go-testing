@@ -17,11 +17,15 @@ func main() {
 
 	// start a goroutine to read user input
 	go readUserInput(doneChan)
+
 	// block until the doneChan gets a value
+	<-doneChan
 
 	// close the channel
+	close(doneChan)
 
 	// say goodbye
+	fmt.Println("Goodbye.")
 }
 
 func readUserInput(doneChan chan bool) {
