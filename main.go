@@ -86,7 +86,7 @@ func isPrime(n int) (bool, string) {
 		return false, "Negative numbers are not prime"
 	}
 
-	// use the modulus operator
+	// use the modulus operator to see if the number is prime
 	for i := 2; i <= n/2; i++ {
 		if n%i == 0 {
 			// not a prime number
